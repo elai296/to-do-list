@@ -19,5 +19,6 @@ addForm.addEventListener('submit', (e) => {
     console.log(todo);
     if(todo.length){ //make sure the user put something in
         generateTemplate(todo); //call on the function
+        addForm.reset(); //it also reset the form
     }
 });
