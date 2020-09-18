@@ -1,5 +1,7 @@
 let add = document.querySelector(".add");
 let addListGroup = document.querySelector(".list-group");
+let deleteButton = document.querySelector('.fa fa-trash');
+
 
 add.addEventListener("submit", (ev) => {
   ev.preventDefault();
@@ -14,6 +16,11 @@ add.addEventListener("submit", (ev) => {
     newList.append(newSpan,newIcon);
   }
 });
+
+deleteButton.addEventListener("click", () => {
+  console.log(deleteButton);
+   deleteButton.parentElement.remove();
+})
 // add.addEventListener("submit", (ev) => {
 //     ev.preventDefault();
 //     let value = ev.currentTarget.querySelector("input").value;

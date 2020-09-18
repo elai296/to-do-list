@@ -1,5 +1,6 @@
 const addForm = document.querySelector('.add');
 const list = document.querySelector('.todos');
+const list = document.querySelector('.todos');
 
 
 const generateTemplate = todo => { //create separate function so it's more readable
@@ -22,3 +23,16 @@ addForm.addEventListener('submit', (e) => {
         addForm.reset(); //it also reset the form
     }
 });
+
+
+list.addEventListener("click", (e) => {
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
+    }
+});
+                    // deleteButton.addEventListener("click", (e) => {
+                    //     if(deleteButton.children.contain("delete")){
+                    //         console.log('classList', deleteButton.classList);
+                    //         deleteNow.parentElement.remove();
+                    //     }
+                    // });
